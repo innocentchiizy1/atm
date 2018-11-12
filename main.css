@@ -1,0 +1,52 @@
+
+html{
+   background-color: grey;
+}
+p{
+    font-size: 25px;
+}
+.atm{
+    font-size: 70px;
+    font-weight: 300;
+    text-align: center;
+    color: red;
+};
+.atm:hover{
+    color: yellow;
+    font-size: 80px;
+}
+.row1,.row2,.row3{
+    display: flex;
+}
+.with{
+   flex: 50%; 
+  
+}
+.dep{
+  flex: 50%;
+}
+.pin{
+    flex: 50%;
+}
+.inq{
+    flex: 50%;   
+}
+.rec{
+    flex: 50%;   
+}
+.pay{
+    flex: 50%;  
+}
+
+.exit{
+   float: right;  
+}
+
+button{
+   color: brown;
+   text-align: center;
+
+}
+button:hover{
+    color: red;
+}
