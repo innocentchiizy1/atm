@@ -100,7 +100,7 @@ let pin = prompt("INPUT YOUR FOUR(4)DIGIT PIN")
 if (pin === "1234") {
     alert("WELCOME, KINDLY CHOOSE A TRANSACTION BELOW");
 } else {
-    alert("incorrect pin")
+    alert("INCORRECT PIN!!!!")
     exit()
 
 }
@@ -151,28 +151,112 @@ function atm() {
 function atmm() {
     let balance = 2000;
     alert(" your available balance is $ " + balance);
+    
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////DEPOSIT////
-function deposit(){
+function deposit() {
     let balance = 2000;
-    let customer=prompt("How much do you want to deposit?")
+    let customer = prompt("How much do you want to deposit?")
     alert("You are making a deposit of " + customer)
     alert("Transaction Successful! Thank you for banking with us");
     alert("Your new balance is " + (parseInt(customer) + parseInt(balance)));
- }
+}
 //////////////////////////////////////////////////////////////////////////////
 /////RECHARGE////
-function recharge(){
-    
+/////MTN/////
+function mtn() {
+    let balance = 2000;
+    let amt = prompt("how much airtime would you like to purchase?")
+    alert("you are making a purchase of " + amt);
+    if(amt >= balance){
+        alert('Insufficient Funds');
+        return false;
+    }else{
+    alert("your request is processing, You'll receive a confimation message shortly")
+    }
+}
+/////9MOBILE/////
+function mobile() {
+    let balance = 2000;
+    let amt = prompt("how much airtime would you like to purchase?")
+    alert("you are making a purchase of " + amt);
+    if(amt >= balance){
+        alert('Insufficient Funds');
+        return false;
+    }else{
+    alert("your request is processing, You'll receive a confimation message shortly")
+    }
+}
+/////AIRTEL/////
+function airtel() {
+    let balance = 2000;
+    let amt = prompt("how much airtime would you like to purchase?")
+    alert("you are making a purchase of " + amt);
+    if(amt >= balance){
+        alert('Insufficient Funds');
+        return false;
+    }else{
+    alert("your request is processing, You'll receive a confimation message shortly")
+    }
+}
+/////GLO/////
+function glo() {
+    let balance = 2000;
+    let amt = prompt("how much airtime would you like to purchase?")
+    alert("you are making a purchase of " + amt);
+    if(amt >= balance){
+        alert('Insufficient Funds');
+        return false;
+    }else{
+    alert("your request is processing, You'll receive a confimation message shortly")
+    }
 }
 
 
+function recharge() {
+    var choice = parseInt(prompt('Select your network 1.) MTN 2.) 9MOBILE 3.) AIRTEL 4.) GLO')); //prompt user for choice.
+    if (choice === 1) {
+        mtn();
+    } else if (choice === 2) {
+        mobile();
+    } else if (choice === 3) {
+        airtel();
+    } else if (choice === 4) {
+        glo();
+    } else {
+        exit();
+    }
+}
+//////////////////////////////////////////////////////////////
+////CHANGE PIN///////
+function pinn() {
+    alert("You are trying to change your pin")
+    let npin = prompt("ENTER OLD PIN")
+    if (npin === "1234") {
+        nnpin = prompt("PIN CORRECT!!  ENTER NEW PIN")
+        nnnpin = prompt("ENTER NEW PIN AGAIN")
+    } if (nnpin === nnnpin) {
+        alert("PIN CHANGED, YOUR NEW PIN IS " + nnnpin);
+        pinChange()
+    }
 
-
-
-
+    else {
+        alert("PIN INCORRECT!! TRY AGAIN")
+    }
+}
+//////NEW PIN////////
+function pinChange() {
+    let pin = prompt("INPUT YOUR FOUR(4)DIGIT PIN")
+    if (pin === nnnpin) {
+        alert("WELCOME, KINDLY CHOOSE A TRANSACTION BELOW");
+    } else {
+        alert("INCORRECT PIN!!!!")
+        alert("TAKE YOUR CARD!!!")
+window.close()
+    }
+}
 
 
 

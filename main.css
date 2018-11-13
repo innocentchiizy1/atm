@@ -45,6 +45,7 @@ p{
 button{
    color: brown;
    text-align: center;
+   border-radius: 90px;
 
 }
 button:hover{
