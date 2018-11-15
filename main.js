@@ -136,10 +136,10 @@ function atm() {
 
     let balance = 2000;
     let freply = prompt("SAVINGS || CURRENT")
-    if (freply === "savings") {
+    if (freply === "savings".toUpperCase()) {
         savings()
 
-    } else if (freply === "current") {
+    } else if (freply === "current".toUpperCase()) {
         current()
     } else {
         return atm()
@@ -151,7 +151,7 @@ function atm() {
 function atmm() {
     let balance = 2000;
     alert(" your available balance is $ " + balance);
-    
+
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -170,11 +170,11 @@ function mtn() {
     let balance = 2000;
     let amt = prompt("how much airtime would you like to purchase?")
     alert("you are making a purchase of " + amt);
-    if(amt >= balance){
+    if (amt >= balance) {
         alert('Insufficient Funds');
         return false;
-    }else{
-    alert("your request is processing, You'll receive a confimation message shortly")
+    } else {
+        alert("your request is processing, You'll receive a confimation message shortly")
     }
 }
 /////9MOBILE/////
@@ -182,11 +182,11 @@ function mobile() {
     let balance = 2000;
     let amt = prompt("how much airtime would you like to purchase?")
     alert("you are making a purchase of " + amt);
-    if(amt >= balance){
+    if (amt >= balance) {
         alert('Insufficient Funds');
         return false;
-    }else{
-    alert("your request is processing, You'll receive a confimation message shortly")
+    } else {
+        alert("your request is processing, You'll receive a confimation message shortly")
     }
 }
 /////AIRTEL/////
@@ -194,11 +194,11 @@ function airtel() {
     let balance = 2000;
     let amt = prompt("how much airtime would you like to purchase?")
     alert("you are making a purchase of " + amt);
-    if(amt >= balance){
+    if (amt >= balance) {
         alert('Insufficient Funds');
         return false;
-    }else{
-    alert("your request is processing, You'll receive a confimation message shortly")
+    } else {
+        alert("your request is processing, You'll receive a confimation message shortly")
     }
 }
 /////GLO/////
@@ -206,11 +206,11 @@ function glo() {
     let balance = 2000;
     let amt = prompt("how much airtime would you like to purchase?")
     alert("you are making a purchase of " + amt);
-    if(amt >= balance){
+    if (amt >= balance) {
         alert('Insufficient Funds');
         return false;
-    }else{
-    alert("your request is processing, You'll receive a confimation message shortly")
+    } else {
+        alert("your request is processing, You'll receive a confimation message shortly")
     }
 }
 
@@ -237,12 +237,11 @@ function pinn() {
     if (npin === "1234") {
         nnpin = prompt("PIN CORRECT!!  ENTER NEW PIN")
         nnnpin = prompt("ENTER NEW PIN AGAIN")
-    } if (nnpin === nnnpin) {
+    }
+    if (nnpin === nnnpin) {
         alert("PIN CHANGED, YOUR NEW PIN IS " + nnnpin);
         pinChange()
-    }
-
-    else {
+    } else {
         alert("PIN INCORRECT!! TRY AGAIN")
     }
 }
@@ -254,11 +253,45 @@ function pinChange() {
     } else {
         alert("INCORRECT PIN!!!!")
         alert("TAKE YOUR CARD!!!")
-window.close()
+        window.close()
     }
 }
 
+///////////////////////////////////////////////////////////////////
+///////PAY BILLS///////////
+/////TV/////
+function tv() {
+    let balance = 2000;
+    let tvamtt = prompt("INPUT THE NAME ASSOCIATED WITH YOUR DECODER");
+    let tvamt = prompt("INPUT YOUR TEN(10)DIGITS DECODER NUMBER");
+    alert("HELLO " + tvamtt + " YOUR TV SUBSCRIPTION EXPIRES IN TWO(2) DAYS||PROCEED TO PAYMENT");
+    alert("YOU ARE MAKING A DEFAULT PAYMENT OF $ 75")
 
+    alert("your request is processing, You'll receive a confimation message shortly")
+
+}
+/////LIGHT/////
+function light() {
+    let balance = 2000;
+    let lightt = prompt("INPUT THE NAME ASSOCIATED WITH YOUR PREPAID METER");
+
+    alert("GOOD-DAY MR " + lightt + " WOULD YOU LIKE TO MAKE YOUR DEFAULT PAYMENT OF $ 100")
+
+    alert("your request is processing, You'll receive a confimation message shortly")
+
+}
+
+
+function bill() {
+    let choicee = parseInt(prompt('Select your bill payment 1.) TV 2.) LIGHT'));
+    if (choicee === 1) {
+        tv();
+    } else if (choicee === 2) {
+        light();
+    } else {
+        exit();
+    }
+}
 
 /////////////////////////////////////////////////////////////////
 ////EXIT////
