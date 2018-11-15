@@ -136,9 +136,9 @@ function atm() {
 
     let balance = 2000;
     let freply = prompt("SAVINGS || CURRENT")
-    if (freply === "savings".toUpperCase()) {
+    if (freply === "savings".toLowerCase ) {
         savings()
-
+ 
     } else if (freply === "current".toUpperCase()) {
         current()
     } else {
@@ -150,7 +150,7 @@ function atm() {
 
 function atmm() {
     let balance = 2000;
-    alert(" your available balance is $ " + balance);
+    alert(" your availabl e balance is $ " + balance);
 
 };
 
